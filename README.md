@@ -4,8 +4,8 @@ This game can be run by accessing index.html
 
 ## Installation
 1. Download and unzip the GitHub zip file, or clone the repository onto your computer:
-	* zip file
-	* git clone
+	* [zip File](https://github.com/lostandsaved/frontend-nanodegree-arcade-game/archive/master.zip)
+	* [git Clone](https://github.com/lostandsaved/frontend-nanodegree-arcade-game.git)
 2. Open a browser window and navigate to the index.html file you unzipped or cloned.
 
 ## Usage
