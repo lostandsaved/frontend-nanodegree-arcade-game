@@ -7,6 +7,7 @@ This game can be run by accessing index.html
 	* [zip File](https://github.com/lostandsaved/frontend-nanodegree-arcade-game/archive/master.zip)
 	* [git Clone](https://github.com/lostandsaved/frontend-nanodegree-arcade-game.git)
 2. Open a browser window and navigate to the index.html file you unzipped or cloned.
+3. Visit the game hosted on [GitHub](https://lostandsaved.github.io/frontend-nanodegree-arcade-game/)
 
 ## Usage
 Move the player across the road using your keyboard's arrow keys and reach the water to increase your score.
