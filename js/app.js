@@ -17,18 +17,19 @@ var yPositions = [55, 140, 225];
 var xPositions = [-150, -250, -450, -950, -600];
 
 //Create a random speed between 200 and 250
-var randomSpeed = Math.floor((Math.random() * 50) + 200);
+var speed = Math.floor((Math.random() * 50) + 200);
 
 //Enemies our player must avoid
 var Enemy = function() {
   //Variables applied to each of our instances go here,
   //we've provided one for you to get started
   //Making the enemy positions random, but forcing them on the ste
-  this.x = xPositions[Math.floor(Math.random() * yPositions.length)];
+  this.x = xPositions[Math.floor(Math.random() * xPositions.length)];
   this.y = yPositions[Math.floor(Math.random() * yPositions.length)];
   //The image/sprite for our enemies, this uses
   //a helper we've provided to easily load images
   this.sprite = 'images/enemy-bug.png';
+  var speed = Math.floor((Math.random() * 50) + 200);
 };
 
 //Update the enemy's position, required method for game
@@ -38,7 +39,7 @@ Enemy.prototype.update = function(dt) {
   //which will ensure the game runs at the same speed for
   //all computers.
   if (this.x < 500) {
-    this.x = this.x + (randomSpeed * dt);
+    this.x = this.x + (speed * dt);
   }
   else {
     this.x = -50;
@@ -56,8 +57,8 @@ Enemy.prototype.update = function(dt) {
   }
   //If a player makes it to the water, reset the bug and speed
   if (player.y < 20) {
-    this.x = this.x + (randomSpeed * dt);
-    this.x = xPositions[Math.floor(Math.random() * yPositions.length)];
+    this.x = this.x + (speed * dt);
+    this.x = xPositions[Math.floor(Math.random() * xPositions.length)];
     this.y = yPositions[Math.floor(Math.random() * yPositions.length)];
   }
 };
@@ -78,7 +79,7 @@ var Player = function () {
 
 Player.prototype.update = function() {
 	//Play wins
-	if (player.y < 20) {
+	if (this.y < 20) {
   this.reset();
   //Increase the score if the player wins
   playerScore++;
